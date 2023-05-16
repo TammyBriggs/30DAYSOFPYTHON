@@ -1,39 +1,39 @@
-#1
-def addition_calculator(a, b):
-    print(a + b)
+def simple_calculator():
 
-addition_calculator(20, 10)
+    print("a: Addition")
+    print("s: Subtraction")
+    print("d: Division")
+    print("m: Multiplication")
+    print("i: Indices")
+    print("sqr: Square Root")
+    operation = input("What type of calculation do you want to carry out? ")
 
-#2
-def subtraction_calculator(a, b):
-    print(a - b)
+    if operation == "sqr":
+        number_three = int(input("Enter a Number: "))
+        print(number_three ** 0.5)
 
-subtraction_calculator(20, 10)
+    else:
+        number_one = int(input("Enter Number One: "))
+        number_two = int(input("Enter Number Two: "))
+        if operation == "a":
+            print(number_one + number_two)
+        elif operation == "s":
+            print(number_one - number_two)
+        elif operation == "d":
+            print(number_one // number_two)
+        elif operation == "m":
+            print(number_one * number_two)
+        elif operation == "i":
+            print(number_one ** number_two)
+        else:
+            print("Incorrect Input, try again")
 
-#3
-def deletion(list):
-    list = [11, 2, 33, 14, 5]
-    list.remove(list[-1])
-    print(list)
+simple_calculator()
 
-deletion(list)
+#Deletion
+# def deletion(list):
+#     list = [11, 2, 33, 14, 5]
+#     list.remove(list[-1])
+#     print(list)
 
-#4
-def division_calculator(a, b):
-    print(a / b)
-
-division_calculator(20, 10)
-
-#5
-def indices_calculator(a, b):
-    print(a ** b)
-
-indices_calculator(10, 2)
-
-#6
-from math import sqrt
-
-def squareroot_calculator(a):
-    print(sqrt(a))
-
-squareroot_calculator(100)
+# deletion(list)
